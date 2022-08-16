@@ -6,7 +6,7 @@ function solution(n) {
   let sum = 0
 
   //숫자인 n을 문자열로 바꾼후. 배열로 만들고.배열안의 요소를 숫자로 변경
-  var arr = (n + '').split('').map(x => parseInt(x));  //[ 7, 1, 8, 2, 5, 3 ]
+  var arr = (n + "").split("").map(x => parseInt(x));  //[ 7, 1, 8, 2, 5, 3 ]
 
   //
   let new_arr = arr.reverse() //안에 요소를 뒤집기 [ 3, 5, 2, 8, 1, 7 ]
