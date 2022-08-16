@@ -1,21 +1,21 @@
-// // https://school.programmers.co.kr/learn/courses/30/lessons/12916﻿
+// https://school.programmers.co.kr/learn/courses/30/lessons/12916﻿
 
-// function solution(s) {
+function solution(s) {
 
-//   let lowstr = s.toLowerCase()
-//   let count = 0
+  let lowstr = s.toLowerCase()
+  let count = 0
 
-//   for (let i = 0; i < s.length; i++) {
-//     if (lowstr[i] === 'p') {
-//       count++
-//     } else if (lowstr[i] === 'y') {
-//       count--
-//     }
-//   }
+  for (let i = 0; i < s.length; i++) {
+    if (lowstr[i] === 'p') {
+      count++
+    } else if (lowstr[i] === 'y') {
+      count--
+    }
+  }
 
-//   return count == 0 ? true : false;
+  return count == 0 ? true : false;
 
-// }
+}
 
 
 function solution(s) {

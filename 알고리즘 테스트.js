@@ -1,33 +1,21 @@
-// function solution(arr1, arr2, signs) {
-//   let answer = [[]];
-//   for (let i = 0; i < arr1.length; i++) {
-//     for (let j = 0; j < arr1[i].length; j++) {
-//       answer += arr1[i][j] + arr2[i][j]
-//     }
-//   } return answer
+// 2번. 자연수 뒤집어 더하기
 
-// }
-// let arr1 = [[5, 7, 1], [2, 3, 5]];
-// let arr2 = [[5, 1, 6], [7, 5, 6]];
-// let signs = [[true, true, false], [false, true, false]];
-// console.log(solution(arr1, arr2, signs))
+function solution(n) {
+  let plus = ""
+  let result = ""
+  let sum = 0
 
+  //숫자인 n을 문자열로 바꾼후. 배열로 만들고.배열안의 요소를 숫자로 변경
+  var arr = (n + '').split('').map(x => parseInt(x));  //[ 7, 1, 8, 2, 5, 3 ]
 
-// function solution(n) {
-//   let plus = ""
-//   let result = ""
-
-//   let sum = 0
-//   var arr = (n + '').split('').map(x => parseInt(x));
-//   new_arr = arr.reverse()
-//   for (i = 0; i < new_arr.length; i++) {
-//     plus += arr[i] + '+'
-//     sum += new_arr[i]
-//   }
-//   plus = plus.slice(0, -1);
-//   result = plus + '=' + sum
-//   return typeof (result)
-// }
-// console.log(solution(718253))
-a = '42+' + 52
-console.log(a)
+  //
+  let new_arr = arr.reverse() //안에 요소를 뒤집기 [ 3, 5, 2, 8, 1, 7 ]
+  for (i = 0; i < new_arr.length; i++) {  //new_arr for문으로 돌려서
+    plus += arr[i] + '+'    // '3+5+2+8+1+7+'
+    sum += new_arr[i]    //26
+  }
+  plus = plus.slice(0, -1);    //plus의 마지막 + 지워주기
+  result = plus + '=' + sum    //합치기 
+  return result  //'3+5+2+8+1+7=26'
+}
+console.log(solution(718253))
